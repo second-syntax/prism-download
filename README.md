@@ -70,4 +70,4 @@ Get-FileHash .\Prism-Simple-Setup-0.1.1.exe -Algorithm SHA256
 
 ## 문의
 
-의견이나 버그는 메일로 보내 주세요: wanee1024@gmail.com
+의견이나 버그는 메일로 보내 주세요: secondsyntax.official@gmail.com
