@@ -9,7 +9,7 @@
 
 | 팩 | 담는 것 | 받기 |
 | --- | --- | --- |
-| **심플팩** | 딱 필요한 것만: 탐색기 창 하나, 폴더 트리, 미리보기, 폴더·드라이브 전체 이름 찾기, 기본 파일 작업, 메모장·계산기·그림판 | [Prism-Simple-Setup-0.1.0.exe](https://github.com/second-syntax/prism-download/releases/download/simple-v0.1.0/Prism-Simple-Setup-0.1.0.exe) |
+| **심플팩** | 딱 필요한 것만: 탐색기 창 하나, 폴더 트리, 미리보기, 폴더·드라이브 전체 이름 찾기, 기본 파일 작업, 메모장·계산기·그림판 | [Prism-Simple-Setup-0.1.1.exe](https://github.com/second-syntax/prism-download/releases/download/simple-v0.1.1/Prism-Simple-Setup-0.1.1.exe) |
 | 확장팩 | 심플팩 + 창 4개·탭, 도구 칸 나누기와 도구 별도 창, 정리·크기와 중복 확인·폴더 비교 | 공개 예정 |
 | AI팩 | 확장팩 + AI가 함께 찾고 정리 | 준비 중 |
 
@@ -34,12 +34,13 @@
 각 릴리스의 `SHA256SUMS.txt`에 설치 파일의 SHA-256 값이 있어요. PowerShell에서 확인해요.
 
 ```powershell
-Get-FileHash .\Prism-Simple-Setup-0.1.0.exe -Algorithm SHA256
+Get-FileHash .\Prism-Simple-Setup-0.1.1.exe -Algorithm SHA256
 ```
 
 ## 업데이트와 지우기
 
-- **업데이트**: 새 설치 파일을 받아 실행하면 그대로 업데이트돼요. 설정과 기록은 남아요. 자동 업데이트는 아직 없어요.
+- **업데이트**: 새 설치 파일을 받아 실행하면 같은 자리에 업데이트돼요. 설정과 기록은 남아요. 자동 업데이트는 아직 없어요.
+  - 0.1.0 설치 파일로 업데이트한 Prism을 지우면 빈 설치 폴더가 남았어요. 0.1.1부터 고쳤어요.
 - **지우기**: Windows 설정 → 앱 → 설치된 앱에서 "Prism 심플팩"을 지워요.
   - 설정·찾기 기록·메모는 다시 설치할 때를 위해 남겨 둬요.
   - 완전히 지우려면 Prism을 지운 뒤 `%LOCALAPPDATA%\SecondSyntax\Prism` 폴더를 지워요.
@@ -50,7 +51,11 @@ Get-FileHash .\Prism-Simple-Setup-0.1.0.exe -Algorithm SHA256
 - Prism이 직접 인터넷을 쓰는 때는 두 가지예요.
   - 계산기의 환율 탭을 열 때(유럽중앙은행 공개 환율)
   - OneDrive 같은 클라우드 파일을 열 때(그 서비스가 파일을 내려받음)
-- HTML·한글(HWP) 미리보기는 Windows의 **Microsoft Edge WebView2** 엔진으로 그려요. 이 엔진은 켜질 때 스스로 Microsoft 서비스에 접속할 수 있어요(엔진 업데이트·보안 확인 등, 2026-10-27 측정에서 Microsoft 주소로 연결 4건). 이 접속은 Microsoft의 개인정보처리방침과 Windows 설정을 따라요. 이 접속을 줄이는 수정을 준비하고 있어요.
+- HTML·한글(HWP) 미리보기는 Windows의 **Microsoft Edge WebView2** 엔진으로 그려요.
+  - 0.1.1부터 이 엔진의 SmartScreen 확인과 충돌 기록 전송을 껐어요.
+  - 엔진은 켜질 때마다 Microsoft Edge 설정 서버(`config.edge.skype.com`)에서 설정을 받아요. 엔진·Windows 버전과 기기 식별 번호가 가고, 파일 이름·내용·경로는 가지 않아요. 앱에서 끌 수 있는 공식 설정이 없어요.
+  - 2026-10-27 측정(합성 파일): 엔진이 켜질 때마다 바깥 연결이 0.1.0은 3~4건, 0.1.1은 1건이에요.
+  - 이 접속은 Microsoft의 개인정보처리방침을 따라요.
 - 심플팩과 확장팩에는 AI 기능이 없어요.
 - 설치 파일을 받을 때의 접속 기록은 GitHub의 개인정보처리방침을 따라요. SECOND SYNTAX는 내려받기 횟수만 봐요.
 
