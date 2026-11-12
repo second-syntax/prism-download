@@ -9,11 +9,15 @@
 
 | 팩 | 담는 것 | 받기 |
 | --- | --- | --- |
-| **심플팩** | 딱 필요한 것만: 탐색기 창 하나, 폴더 트리, 미리보기, 폴더·드라이브 전체 이름 찾기, 기본 파일 작업, 메모장·계산기·그림판 | [Prism-Simple-Setup-0.1.1.exe](https://github.com/second-syntax/prism-download/releases/download/simple-v0.1.1/Prism-Simple-Setup-0.1.1.exe) |
-| 확장팩 | 심플팩 + 창 4개·탭, 도구 칸 나누기와 도구 별도 창, 정리·크기와 중복 확인·폴더 비교 | 공개 예정 |
-| AI팩 | 확장팩 + AI가 함께 찾고 정리 | 준비 중 |
+| **Lite 팩** | 딱 필요한 것만: 탐색기 창 하나, 폴더 트리, 미리보기, 폴더·드라이브 전체 이름 찾기, 기본 파일 작업, 메모장·계산기·그림판 | [Prism-Simple-Setup-0.1.1.exe](https://github.com/second-syntax/prism-download/releases/download/simple-v0.1.1/Prism-Simple-Setup-0.1.1.exe) |
+| Standard 팩 | Lite 팩 + 창 4개·탭, 도구 칸 나누기와 도구 별도 창, 정리·크기와 중복 확인·폴더 비교 | 공개 예정 |
+| AI 팩 | Standard 팩 + AI가 함께 찾고 정리 | 준비 중 |
 
 모든 버전은 [Releases](https://github.com/second-syntax/prism-download/releases)에 있어요.
+
+**팩 이름이 바뀌었어요(2026-11-12).** 심플팩 → **Lite 팩**, 확장팩 → **Standard 팩**, AI팩 → **AI 팩**.
+지금 받을 수 있는 0.1.1은 이름을 바꾸기 전에 낸 판이라, 설치 파일과 시작 메뉴, 설치된 앱 목록에 "Prism 심플팩"으로 나와요.
+다음 판부터 "Prism Lite 팩"으로 나오고, 0.1.1 위에 설치하면 같은 자리에서 이름이 바뀌어요.
 
 ## 필요한 것
 
@@ -26,7 +30,7 @@
 2. **"Windows의 PC 보호" 창이 뜰 수 있어요.** Prism은 아직 코드 서명 인증서가 없는 새 프로그램이라서 그래요. **추가 정보 → 실행**을 누르면 설치돼요.
    - **스마트 앱 컨트롤**이 켜진 PC에서는 서명 없는 프로그램이 실행되지 않고, 넘기는 버튼도 없어요. 이런 PC에서는 아직 Prism을 쓸 수 없어요.
    - 회사 PC는 보안 정책 때문에 설치가 막힐 수 있어요.
-3. 관리자 승인 없이 **내 계정에만** 설치돼요. 시작 메뉴에 "Prism 심플팩"이 생겨요.
+3. 관리자 승인 없이 **내 계정에만** 설치돼요. 시작 메뉴에 "Prism 심플팩"이 생겨요(0.1.1 기준. 다음 판부터 "Prism Lite 팩").
 4. 글자 인식에 쓰는 Microsoft Visual C++ 런타임이 없는 PC라면, 설치 화면이 Microsoft에서 받아 설치하도록 안내해요(관리자 승인 한 번). 건너뛰어도 Prism은 설치되고, 글자 인식만 런타임을 설치한 뒤에 동작해요.
 
 ## 받은 파일이 원본과 같은지 확인
@@ -41,7 +45,7 @@ Get-FileHash .\Prism-Simple-Setup-0.1.1.exe -Algorithm SHA256
 
 - **업데이트**: 새 설치 파일을 받아 실행하면 같은 자리에 업데이트돼요. 설정과 기록은 남아요. 자동 업데이트는 아직 없어요.
   - 0.1.0 설치 파일로 업데이트한 Prism을 지우면 빈 설치 폴더가 남았어요. 0.1.1부터 고쳤어요.
-- **지우기**: Windows 설정 → 앱 → 설치된 앱에서 "Prism 심플팩"을 지워요.
+- **지우기**: Windows 설정 → 앱 → 설치된 앱에서 "Prism 심플팩"(다음 판부터 "Prism Lite 팩")을 지워요.
   - 설정·찾기 기록·메모는 다시 설치할 때를 위해 남겨 둬요.
   - 완전히 지우려면 Prism을 지운 뒤 `%LOCALAPPDATA%\SecondSyntax\Prism` 폴더를 지워요.
 
@@ -56,7 +60,7 @@ Get-FileHash .\Prism-Simple-Setup-0.1.1.exe -Algorithm SHA256
   - 엔진은 켜질 때마다 Microsoft Edge 설정 서버(`config.edge.skype.com`)에서 설정을 받아요. 엔진·Windows 버전과 기기 식별 번호가 가고, 파일 이름·내용·경로는 가지 않아요. 앱에서 끌 수 있는 공식 설정이 없어요.
   - 2026-10-27 측정(합성 파일): 엔진이 켜질 때마다 바깥 연결이 0.1.0은 3~4건, 0.1.1은 1건이에요.
   - 이 접속은 Microsoft의 개인정보처리방침을 따라요.
-- 심플팩과 확장팩에는 AI 기능이 없어요.
+- Lite 팩과 Standard 팩에는 AI 기능이 없어요.
 - 설치 파일을 받을 때의 접속 기록은 GitHub의 개인정보처리방침을 따라요. SECOND SYNTAX는 내려받기 횟수만 봐요.
 
 ## 사용 조건
